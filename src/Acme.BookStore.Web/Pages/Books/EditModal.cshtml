@@ -1,13 +1,18 @@
 ﻿@page
 @using Acme.BookStore.Web.Pages.Books
 @using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Acme.BookStore.Localization
+
+@inject IHtmlLocalizer<BookStoreResource> L
+
 @model EditModalModel
 @{
     Layout = null;
 }
 <abp-dynamic-form abp-model="Book" data-ajaxForm="true" asp-page="/Books/EditModal">
     <abp-modal>
-        <abp-modal-header title="Update"></abp-modal-header>
+        <abp-modal-header title="@L["Update"].Value"></abp-modal-header>
         <abp-modal-body>
             <abp-input asp-for="Id" />
             <abp-form-content />

@@ -1,5 +1,11 @@
 ﻿@page
 @using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Acme.BookStore.Localization
+
+@inject IHtmlLocalizer<BookStoreResource> L
+
+
 @model Acme.BookStore.Web.Pages.Books.CreateModalModel
 @{
     Layout = null;
